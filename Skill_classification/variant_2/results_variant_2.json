@@ -1,0 +1,53 @@
+{
+  "protocol": "leaky (TF-IDF + MLSMOTE on full data, duplicates, row-level split)",
+  "dataset": "data\\skillscope_data.db",
+  "n_train": 131446,
+  "n_test": 32862,
+  "n_labels": 142,
+  "mlsmote_cap": 150000,
+  "paper_reference_micro": {
+    "precision": 0.908,
+    "recall": 0.876,
+    "f1": 0.889
+  },
+  "beats_paper": {
+    "precision": true,
+    "recall": true,
+    "f1": true
+  },
+  "beats_all_paper_metrics": true,
+  "improved": {
+    "micro": {
+      "precision": 0.9110586532727959,
+      "recall": 0.8790811433989506,
+      "f1": 0.8947842890388694
+    },
+    "macro": {
+      "precision": 0.6479283439564519,
+      "recall": 0.29977802205725756,
+      "f1": 0.3559563147142909
+    },
+    "weighted": {
+      "precision": 0.9152721581699614,
+      "recall": 0.8790811433989506,
+      "f1": 0.875020786463628
+    }
+  },
+  "baseline_rf_same_split": null,
+  "blend_weights": {
+    "knn": 0.5,
+    "rf": 0.30000000000000004,
+    "et": 0.2
+  },
+  "threshold": 0.29,
+  "validation_micro_f1": 0.8904357677611925,
+  "validation_prf": {
+    "precision": 0.908015396493021,
+    "recall": 0.8735239113010954,
+    "f1": 0.8904357677611925,
+    "feasible": false,
+    "tier": 2
+  },
+  "seed": 42,
+  "runtime_seconds": 575.9
+}
