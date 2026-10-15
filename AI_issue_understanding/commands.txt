@@ -1,0 +1,23 @@
+general:
+
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+
+cd C:\Users\nooru\Documents\3_modules
+
+.\AI_issue_understanding\.issueunderstanding\Scripts\Activate.ps1
+
+# 1. Inspect DB columns
+python -m AI_issue_understanding inspect --db AI_issue_understanding\skillscope_data.db
+
+# 2. Evaluate (add --no-rerank for a faster baseline)
+python -m AI_issue_understanding evaluate --db AI_issue_understanding\skillscope_data.db --limit 200
+
+# 3. Analyze one issue (PowerShell one-liner)
+python -m AI_issue_understanding analyze --db AI_issue_understanding\skillscope_data.db --title "app logs me out randomly" --body "I get kicked to the login page every few minutes"
+
+# embedding-only baseline (seconds to a couple of minutes)
+python -m AI_issue_understanding evaluate --db AI_issue_understanding\skillscope_data.db --limit 200 --no-rerank
+
+# full pipeline on a small sample to check the speed
+python -m AI_issue_understanding evaluate --db AI_issue_understanding\skillscope_data.db --limit 50
