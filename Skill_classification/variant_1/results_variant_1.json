@@ -1,0 +1,116 @@
+{
+  "files": [
+    "skill_classifier.py",
+    "skill_classifier_test_pipeline.py"
+  ],
+  "dataset": "data\\skillscope_data.db",
+  "n_train": 5723,
+  "n_test": 1431,
+  "n_labels": 217,
+  "mode": "competition",
+  "competition_floors": {
+    "precision": 0.45,
+    "recall": 0.76,
+    "f1": 0.3248
+  },
+  "beats_competition_floors": {
+    "precision": true,
+    "recall": true,
+    "f1": true
+  },
+  "beats_all_competition_floors": true,
+  "precision": 0.5501927365638246,
+  "recall": 0.7638507279064999,
+  "f1": 0.639651782724783,
+  "improved": {
+    "micro": {
+      "precision": 0.5501927365638246,
+      "recall": 0.7638507279064999,
+      "f1": 0.639651782724783
+    },
+    "macro": {
+      "precision": 0.158767965965075,
+      "recall": 0.22278390860543432,
+      "f1": 0.16601332077848474
+    },
+    "weighted": {
+      "precision": 0.5222987381756278,
+      "recall": 0.7638507279064999,
+      "f1": 0.5907735645383353
+    }
+  },
+  "baseline_rf_same_split": {
+    "micro": {
+      "precision": 0.6907167619781327,
+      "recall": 0.4779782653270453,
+      "f1": 0.564985033749803
+    },
+    "macro": {
+      "precision": 0.1516900318992993,
+      "recall": 0.10953604713311789,
+      "f1": 0.10805207105122162
+    },
+    "weighted": {
+      "precision": 0.5157735136823584,
+      "recall": 0.4779782653270453,
+      "f1": 0.45689306129963375
+    }
+  },
+  "classifier": {
+    "mode": "competition",
+    "floors": {
+      "precision": 0.45,
+      "recall": 0.76,
+      "f1": 0.3248
+    },
+    "blend_weights": {
+      "cnb": 0.2,
+      "knn": 0.0,
+      "lr": 0.0,
+      "repo": 0.8
+    },
+    "global_threshold": 0.29000000000000004,
+    "per_label_thresholds_used": false,
+    "reference_floor_oof": null,
+    "constraint_feasible": true,
+    "oof_micro": {
+      "precision": 0.5293338761926678,
+      "recall": 0.7804818207918983,
+      "f1": 0.630829922788068
+    },
+    "beats_floors_oof": true,
+    "oof_objective": 0.44448918323129993,
+    "members_oof": {
+      "cnb": {
+        "oof_best_threshold": 0.35000000000000003,
+        "oof_micro_f1": 0.5424448833336929
+      },
+      "knn": {
+        "oof_best_threshold": 0.3,
+        "oof_micro_f1": 0.6203567148523957
+      },
+      "lr": {
+        "oof_best_threshold": 0.3,
+        "oof_micro_f1": 0.5992921639526937
+      },
+      "repo": {
+        "oof_best_threshold": 0.3,
+        "oof_micro_f1": 0.6358809774058728
+      }
+    }
+  },
+  "seed": 42,
+  "runtime_seconds": 550.8,
+  "delta_micro": {
+    "precision": -0.14052402541430808,
+    "recall": 0.2858724625794546,
+    "f1": 0.07466674897497994
+  },
+  "all_improved_micro": false,
+  "delta_macro": {
+    "precision": 0.007077934065775698,
+    "recall": 0.11324786147231643,
+    "f1": 0.05796124972726312
+  },
+  "all_improved_macro": true
+}
